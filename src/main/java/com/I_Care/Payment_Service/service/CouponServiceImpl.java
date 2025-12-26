@@ -39,10 +39,10 @@ public class CouponServiceImpl implements CouponService {
         couponContext.setPaymentType(request.getPaymentType());
 
         // Validations
-        couponValidator.validate(ruleFactory.buildRules(),couponContext,coupon);
+        couponValidator.validate(ruleFactory.buildRules(), couponContext, coupon);
 
         DiscountStrategy strategy = discountStrategyFactory.getStrategy(coupon);
         return strategy.calculate(order.getTotalAmount());
-        
+
     }
 }
