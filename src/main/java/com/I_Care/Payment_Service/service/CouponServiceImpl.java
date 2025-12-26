@@ -13,7 +13,9 @@ import com.I_Care.Payment_Service.startergy.DiscountStrategy;
 import com.I_Care.Payment_Service.startergy.DiscountStrategyFactory;
 import com.I_Care.Payment_Service.validator.CouponValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CouponServiceImpl implements CouponService {
 
     private final OrderRepository orderRepository;
