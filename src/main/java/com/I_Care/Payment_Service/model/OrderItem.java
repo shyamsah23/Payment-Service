@@ -11,11 +11,23 @@ public class OrderItem {
     private Long id;
     private double price;
     private String category;
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
 
-    public OrderItem(Long id, double price, String category) {
+    public OrderItem(Long id, double price, String category , Order order) {
         this.id = id;
         this.price = price;
         this.category = category;
+        this.order = order;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public OrderItem() {
