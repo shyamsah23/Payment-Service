@@ -10,4 +10,27 @@ public class CouponContext {
     public PaymentType paymentType;
     public List<Coupon> appliedCoupon = new ArrayList<>();
 
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public PaymentType getPaymentType() {
+        return paymentType;
+    }
+
+    public void setPaymentType(PaymentType paymentType) {
+        this.paymentType = paymentType;
+    }
+
+    public List<Coupon> getAppliedCoupon() {
+        return appliedCoupon;
+    }
+
+    public void setAppliedCoupon(List<Coupon> appliedCoupon) {
+        this.appliedCoupon = appliedCoupon;
+    }
 }
